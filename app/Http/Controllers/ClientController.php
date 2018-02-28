@@ -7,8 +7,6 @@ use App\Title as Title;
 
 class ClientController extends Controller
 {
-
-
     //
     public function __construct( Title $titles )
     {
@@ -18,5 +16,25 @@ class ClientController extends Controller
     public function di()
     {
         dd($this->titles);
+    }
+
+    public function index() {
+        return view('client/index');
+    }
+
+    public function newClient() {
+        return view('client/newClient');
+    }
+
+    public function create() {
+        return view('client/create');
+    }
+
+    public function show($client_id) {
+        return view('client/show');
+    }
+
+    public function modify($client_id) {
+        return view('client/modify');
     }
 }
